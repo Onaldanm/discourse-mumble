@@ -1,5 +1,5 @@
 (function() {
-	Discourse.HeaderController = Discourse.Controller.extend({
+	Discourse.HeaderController = Discourse.Controller.extend(Discourse.HeaderController, {
 	  actions: {
 		showMumble: function(headerView) {
 		  var self = this;
@@ -12,7 +12,7 @@
 	  }
   });
   
-  Discourse.HeaderView = Discourse.View.extend({
+  Discourse.HeaderView = Discourse.View.extend(Discourse.HeaderView, {
 	  showMumble: function() {
 		this.get("controller").send("showMumble", this);
 	  }

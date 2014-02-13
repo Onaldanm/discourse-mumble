@@ -5,8 +5,8 @@
 		  var self = this;
 
 		  Discourse.ajax("/notifications").then(function(result) {
-			self.set("notifications", result);
-			headerView.showDropdownBySelector("#user-notifications");
+			self.set("mumble", result);
+			headerView.showDropdownBySelector("#user-mumble");
 		  });
 		}
 	  }

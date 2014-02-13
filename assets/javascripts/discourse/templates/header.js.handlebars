@@ -42,7 +42,7 @@
       <ul class='icons clearfix'>
 	    {{#if currentUser}}
 	    <li class='mumble'>
-		 <a class='icon' href="#" {{action showMumble target="view"}} data-mumble="mumble-dropdown" id='user-mumble' title='Mumble'><i class='fa fa-comment'></i></a>
+		 <a class='icon' href="#" {{action showMumble target="view"}} data-mumble="mumble-dropdown" id='user-mumble' title='Mumble'><i class='fa fa-fa-headphones'></i></a>
 		</li>
 		{{/if}}
         <li class='notifications'>
@@ -105,6 +105,8 @@
 
       {{render search}}
 
+	  {{render mumble mumble}}
+	  
       {{render notifications notifications}}
 
       {{#if view.renderSiteMap}}

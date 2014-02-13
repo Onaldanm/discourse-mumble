@@ -11,4 +11,10 @@
 		}
 	  }
   });
+  
+  Discourse.HeaderView = Discourse.View.extend({
+	  showMumble: function() {
+		this.get("controller").send("showMumble", this);
+	  }
+  });
 })();

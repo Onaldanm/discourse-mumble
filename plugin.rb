@@ -4,3 +4,4 @@
 # author: onaldanm
 
 register_asset "javascripts/discourse/templates/header.js.handlebars"
+register_asset "javascripts/mumble.js"

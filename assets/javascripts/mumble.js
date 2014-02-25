@@ -1,20 +1,11 @@
 (function() {
-	// Discourse.HeaderController = Discourse.Controller.extend({
-	  // actions: {
-		// showMumble: function(headerView) {
-		  // var self = this;
-
-		  // Discourse.ajax("/notifications").then(function(result) {
-			// self.set("mumble", result);
-			// headerView.showDropdownBySelector("#user-mumble");
-		  // });
-		// }
-	  // }
-  // });
-  
-  // Discourse.HeaderView = Discourse.View.extend({
-	  // showMumble: function() {
-		// this.get("controller").send("showMumble", this);
-	  // }
-  // });
+	Discourse.StaticController.reopenClass({
+		PAGES: ['faq', 'tos', 'privacy', 'login', 'bar'],
+		CONFIGS: {
+			'faq': 'faq_url',
+			'tos': 'tos_url',
+			'privacy': 'privacy_policy_url',
+			'bar': 'bar_url'
+		}
+	});
 })();
